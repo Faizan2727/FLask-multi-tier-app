@@ -1,4 +1,4 @@
-# README: Setting Up and Accessing MySQL with Docker and Flask
+# FLASK-MULTI-TIER-APP
 
 This guide explains the steps to set up a MySQL database inside a Docker container, create a table, insert sample data, and use a Flask application to access and display the data.
 
@@ -55,15 +55,15 @@ exit
 ```bash
 docker inspect os1
 ```
-- **Retrieves the container details, including its IP address. This IP will be used in the Python application.
+- Retrieves the container details, including its IP address. This IP will be used in the Python application.
 
 ## Step 7: Modify the Python Application
 
 ```bash
 vim app.py
 ```
--- **Opens the app.py file in the Vim editor.
--- **Updates the IP address in the application to match the MySQL container's IP.
+- Opens the app.py file in the Vim editor.
+- Updates the IP address in the application to match the MySQL container's IP.
 
 
 ### Step 8: Build a Flask Application Docker Image
