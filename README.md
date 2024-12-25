@@ -50,7 +50,23 @@ exit
 ```
 - Exit the MySQL client and the container shell.
 
-### Step 6: Build a Flask Application Docker Image
+
+## Step 6 : Inspect Container for IP Address
+```bash
+docker inspect os1
+```
+- **Retrieves the container details, including its IP address. This IP will be used in the Python application.
+
+## Step 7: Modify the Python Application
+
+```bash
+vim app.py
+```
+-- **Opens the app.py file in the Vim editor.
+-- **Updates the IP address in the application to match the MySQL container's IP.
+
+
+### Step 8: Build a Flask Application Docker Image
 ```bash
 docker build -t mypyos1 .
 ```
@@ -58,14 +74,14 @@ docker build -t mypyos1 .
 - **-t mypyos1**: Tag the image as `mypyos1`.
 - **.**: Use the `Dockerfile` in the current directory to build the image.
 
-### Step 7: Run the Flask Application
+### Step 9: Run the Flask Application
 ```bash
 docker run -it mypos1
 ```
 - **docker run**: Start a container from the `mypos1` image.
 - **-it**: Run in interactive mode with a terminal attached.
 
-### Step 8: Access the Flask Application
+### Step 10: Access the Flask Application
 Open a web browser and navigate to:
 ```
 http://<container_ip>:5000/data
